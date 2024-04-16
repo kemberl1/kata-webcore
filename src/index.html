@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -7,10 +7,118 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="ремонт, диагностика, обслуживание, техника"
+    />
+    <meta
+      name="description"
+      content="Услуги и сервисы: ремонт техники, диагностика, замена дисплея, замена програмного обеспечения"
+    />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
+
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Webpack</h3>
+    <header class="header">
+      <div class="header__container">
+        <button class="header__menu-button button">
+          <img src="./img/menu-burger.svg" alt="иконка сайдбара" />
+        </button>
+        <a class="header__logo logo"
+          ><img src="./img/logo.svg" alt="логотип компании"
+        /></a>
+
+        <div class="header__contacts">
+          <ul class="header__contacts-list list">
+            <li>
+              <a class="header__link link" href="#"
+                ><img src="./img/call.svg" alt="иконка звонка"
+              /></a>
+            </li>
+            <li>
+              <a class="header__link link" href="#"
+                ><img src="./img/chat.svg" alt="иконка чата"
+              /></a>
+            </li>
+            <li>
+              <a class="header__link link" href="#"
+                ><img src="./img/profile.svg" alt="иконка аккаунта"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="header__navigation">
+          <ul class="header__nav-list list">
+            <li>
+              <a class="header__link link" href="#"
+                ><span>Оставить заявку</span
+                ><img src="./img/repair.svg" alt="иконка инструментов"
+              /></a>
+            </li>
+            <li>
+              <a class="header__link link" href="#"
+                ><span>Статус ремонта</span
+                ><img src="./img/checkstatus.svg" alt="иконка лупы"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="body">
+      <section class="service">
+        <div class="service__container">
+          <h2 class="service__title">Услуги и сервисы</h2>
+
+          <menu class="service__navigation navigation-list">
+            <li class="service__navigation-link">
+              <a href="#">Ремонтируемые бренды</a>
+            </li>
+            <li class="service__navigation-link">
+              <a href="#">Ремонтируемые устройства</a>
+            </li>
+            <li class="service__navigation-link">
+              <a href="#">Цены на услуги</a>
+            </li>
+            <li class="service__navigation-link">
+              <a href="#">Адреса сервисных центров</a>
+            </li>
+            <li class="service__navigation-link">
+              <a href="#">Специальные цены</a>
+            </li>
+            <li class="service__navigation-link"><a href="#">Отзывы</a></li>
+          </menu>
+
+          <section class="service__about">
+            <div class="service__about-text">
+              <p class="service__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <p class="service__text service__text--more">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера,<span
+                  >что подтверждает большое количество постоянных клиентов. Мы
+                  гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.</span
+                >
+              </p>
+
+              <button class="service__button button__show-more"
+                >Читать далее</button
+              >
+            </div>
+            <img
+              class="service__image"
+              src="./img/about__image.jpg"
+              alt="логотип компании на стене"
+            />
+          </section>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

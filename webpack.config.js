@@ -2,6 +2,26 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+
+const isDev = process.env.NODE_ENV === 'development'
+console.log(isDev)
+
+const optimization = () => {
+  const config = {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
+  if (isDev === false) {
+    config.minimizer = [
+      new OptimizeCssAssetsPlugin(),
+      new TerserWebpackPlugin()
+    ]
+  }
+  return config
+}
 
 module.exports = {
   // Входной файл
@@ -12,8 +32,8 @@ module.exports = {
     filename: './js/bundle.js'
   },
 
-  // Source maps для удобства отладки
-  devtool: 'source-map',
+  devtool: isDev ? 'source-map' : '', // Source maps для удобства отладки
+  optimization: optimization(),
 
   module: {
     rules: [
@@ -63,14 +83,14 @@ module.exports = {
     ]
   },
   plugins: [
-    // Подключаем файл html, стили и скрипты встроятся автоматически
+    // Подключаем файл html, стили и скрипты встроятся автоматически, по факту нужен, чтобы работать с HTML в сборке, к нему автоматически добавляются все стили и скрипты
     new HtmlWebpackPlugin({
-      title: 'Webpack 4 Starter',
-      template: './src/index.html',
+      title: 'Service Page',
+      template: './src/index.html', //путь к нашей странице
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
+        collapseWhitespace: !isDev
       }
     }),
 
