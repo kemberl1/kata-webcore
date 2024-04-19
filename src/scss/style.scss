@@ -1,3 +1,15 @@
-@import './general/_normalize';
-@import './blocks/_3.1';
-@import './general/fonts';
+// General
+@import './general/__normalize';
+@import './general/__fonts';
+@import './general/__base';
+@import './general/_variables';
+@import './general/__mixin';
+@import '../../node_modules/swiper/swiper.css';
+@import '../../node_modules/swiper/modules/pagination.css';
+@import './general/_swiper';
+
+//Blocks
+@import './blocks/__header';
+@import './blocks/__service';
+@import './blocks/_aside';
+@import './blocks/_brands';

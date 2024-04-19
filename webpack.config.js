@@ -105,6 +105,10 @@ module.exports = {
         from: './src/img',
         to: 'img'
       }
-    ])
+    ]),
+
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.(?!eot|ttf|woff|woff2$)[a-z0-9][a-z0-9]*\.css$/gi
+    })
   ]
 }

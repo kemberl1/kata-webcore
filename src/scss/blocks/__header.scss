@@ -1,0 +1,122 @@
+.header {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 24px;
+  @include respond-to('medium') {
+    margin-bottom: initial;
+  }
+
+  &__container {
+    display: flex;
+    min-height: 88px;
+    align-items: center;
+
+    @include respond-to('medium') {
+      position: absolute;
+      z-index: 1;
+      top: 1.5vw;
+      left: 59.8vw;
+      padding: 0 28px;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    position: relative;
+    flex: 1 1 auto;
+    margin-left: 16px;
+    @include respond-to('small') {
+      margin-left: 40px;
+    }
+    @include respond-to('medium') {
+      display: none;
+    }
+  }
+
+  &__logo::before {
+    @include respond-to('small') {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      top: 50%;
+      transform: translate(-20px, -50%);
+    }
+  }
+
+  &__menu-button {
+    @include respond-to('medium') {
+      display: none;
+    }
+  }
+
+  // .header__contacts-list
+
+  &__contacts {
+    @include respond-to('medium') {
+      display: none;
+    }
+  }
+
+  &__contacts-list {
+    display: none;
+    @include respond-to('small') {
+      display: flex;
+      gap: 16px;
+      margin-right: 20px;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    > span {
+      display: none;
+      @include respond-to('medium') {
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  // .header__navigation
+
+  &__navigation {
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+
+    &__navigation:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 32px;
+      top: 50%;
+      background: #eaeaea;
+      transform: translate(-20px, -50%);
+
+      @include respond-to('medium') {
+        display: none;
+      }
+    }
+  }
+
+  // .header__nav-list
+
+  &__nav-list {
+    display: flex;
+    gap: 16px;
+    @include respond-to('small') {
+      margin-right: 0;
+    }
+    @include respond-to('medium') {
+      gap: 32px;
+    }
+  }
+}

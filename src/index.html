@@ -16,9 +16,10 @@
       content="Услуги и сервисы: ремонт техники, диагностика, замена дисплея, замена програмного обеспечения"
     />
     <title><%= htmlWebpackPlugin.options.title %></title>
+
   </head>
 
-  <body>
+  <body class:="page">
     <header class="header">
       <div class="header__container">
         <button class="header__menu-button button">
@@ -93,7 +94,7 @@
 
           <section class="service__about">
             <div class="service__about-text">
-              <p class="service__text">
+              <p class="service__text content-container">
                 Мы являемся авторизованным сервисным центром по ремонту техники
                 Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
                 официальной гарантией производителя.
@@ -107,7 +108,7 @@
                 >
               </p>
 
-              <button class="service__button button__show-more"
+              <button class="service__button button__show-more" data-initial-text="Читать далее"
                 >Читать далее</button
               >
             </div>
@@ -120,5 +121,155 @@
         </div>
       </section>
     </main>
+
+    <aside class="menu">
+
+
+      <header class="menu-header">
+        <button class="menu-header__button menu-header__button--scale button">
+          <img src="./img/menu__icon-open.svg" alt="кнопка меню в отрытом состоянии">
+        </button>
+        <a class="menu-header__logo logo" href="#">
+          <img src="./img/logo.svg" alt="логотип компании">
+        </a>
+        <a class="menu-header__link menu-header__link--scale link" href="#">
+          <img src="./img/menu__icon-search.svg" alt="иконка лупы">
+        </a>
+      </header>
+
+      <nav class="menu-wrapper">
+        <ul class="menu-nav">
+          <li class="menu-nav__item menu-nav__item--grey menu-nav__item--active ">
+            <a class="menu-nav__link" href="#">Ремонт техники</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Услуги и сервисы</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Продавцам техники</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Партнерам</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Производителям</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Наши сервисные центры</a>
+          </li>
+          <li class="menu-nav__item menu-nav__item--grey">
+            <a class="menu-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <footer class="menu-footer">
+        <ul class="menu-footer__contacts-list list">
+          <li class="menu-footer__link menu-footer__link--scale link">
+            <a href="#"><img src="./img/call.svg" alt="иконка звонка"></a>
+          </li>
+          <li class="menu-footer__link menu-footer__link--scale link">
+            <a href="#"><img src="./img/chat.svg" alt="иконка чата"></a>
+          </li>
+          <li class="menu-footer__link menu-footer__link--scale link">
+            <a href="#"><img src="./img/profile.svg" alt="иконка аккаунта"></a>
+          </li>
+        </ul>
+
+        <address class="contact-info">
+          <a class="contact-info__email" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="contact-info__phone" href="tel:+78008908900">8 800 890 8900</a>
+        </address>
+
+        <ul class="menu__lang">
+          <li class="menu__lang-link--bigger menu__lang-link--current">
+            <a class="menu__lang-link menu__lang-link--grey" href="#">RU</a>
+          </li>
+          <li class="menu__lang-link--bigger">
+            <a class="menu-lang__link menu__lang-link--grey" href="#">EN</a>
+          </li>
+          <li class="menu__lang-link--bigger">
+            <a class="menu-lang__link menu__lang-link--grey menu__lang-link menu__lang-link--bigger" href="#">CH</a>
+          </li>
+        </ul>
+      </footer>
+
+    </aside>
+
+    <section class="brands">
+      <header class="brands__title title__container">
+      <div class="brabds__title-content">
+        <h2 class="brands__title-text">Ремонт техники различных брендов</h2>
+      </div>
+      </header>
+
+      <div class="brands__cards swiper swiper__container">
+        <ul class="brands__cards-list swiper-wrapper content-container">
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap1.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap2.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap3.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap4.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap5.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap6.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap7.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap8.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap1.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap2.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+          <li class="brands__cards-item swiper-slide">
+            <a class="brands__cards-link" href="#">
+              <img src="./img/Bitmap/Bitmap3.svg" alt="кнопка бренда для перехода по ссылке">
+            </a>
+          </li>
+        </ul>
+
+        <div class="swiper-pagination brands__swiper">тут</div>
+        <button class="service__button button__show-more" data-initial-text="Показать всё">
+          Показать все
+        </button>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.swiper {
+  overflow: hidden;
+  margin-bottom: 32px;
+
+  &-wrapper {
+    padding-left: 0;
+  }
+
+  &-slide {
+    width: 240px;
+    height: auto;
+  }
+
+  &-pagination {
+    position: static;
+    padding-top: 24px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    @include respond-to($min-width-small) {
+      display: none;
+    }
+
+    &-bullet {
+      width: 12px;
+      height: 12px;
+      border-color: grey;
+    }
+
+    &-bullet-active {
+      background: grey;
+    }
+  }
+
+  &-slide {
+    .swiper-pagination {
+      margin-top: 20px;
+    }
+  }
+}
