@@ -1,15 +1,26 @@
 // General
-@import './general/__normalize';
-@import './general/__fonts';
-@import './general/__base';
-@import './general/_variables';
-@import './general/__mixin';
+@import './general/normalize';
+@import './general/fonts';
+@import './general/variables';
+@import './general/mixin';
 @import '../../node_modules/swiper/swiper.css';
 @import '../../node_modules/swiper/modules/pagination.css';
-@import './general/_swiper';
+@import './general/swiper';
+@import './general/button__show-more.scss';
+@import './general/show--full';
 
 //Blocks
-@import './blocks/__header';
-@import './blocks/__service';
-@import './blocks/_aside';
-@import './blocks/_brands';
+@import './blocks/header';
+@import './blocks/service';
+@import './blocks/sidebar-menu';
+@import './blocks/input-box';
+@import './blocks/blur-overlay';
+@import './blocks/offer.scss';
+@import './blocks/footer.scss';
+@import './blocks/body';
+
+//Blocks ---> Swiper-cards
+@import './blocks/swiper-cards/cards';
+@import './blocks/swiper-cards/brands';
+@import './blocks/swiper-cards/technics';
+@import './blocks/swiper-cards/prices';

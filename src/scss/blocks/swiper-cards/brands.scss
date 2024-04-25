@@ -1,0 +1,11 @@
+.brands {
+  @include responsive-bottom;
+  border-top: 1px solid $border-bottom;
+
+  &__cards-link {
+    height: 72px;
+    &::after {
+      right: 16px;
+    }
+  }
+}

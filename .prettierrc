@@ -9,5 +9,9 @@
   "jsxBracketSameLine": false,
   "proseWrap": "never",
   "htmlWhitespaceSensitivity": "strict",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "scss": {
+    "at-rule-empty-line-before": ["always", { "except": ["after-same-name"] }],
+    "single-line": false
+  }
 }

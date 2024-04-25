@@ -1,6 +1,6 @@
 .swiper {
   overflow: hidden;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   &-wrapper {
     padding-left: 0;
@@ -13,11 +13,9 @@
 
   &-pagination {
     position: static;
-    padding-top: 24px;
     margin: 0 auto;
-    padding-bottom: 30px;
 
-    @include respond-to($min-width-small) {
+    @media (min-width: $screen-sm) {
       display: none;
     }
 
@@ -36,5 +34,12 @@
     .swiper-pagination {
       margin-top: 20px;
     }
+  }
+}
+
+.swiper-pagination {
+  margin-top: 16px;
+  @media (min-width: $screen-sm) {
+    display: none;
   }
 }

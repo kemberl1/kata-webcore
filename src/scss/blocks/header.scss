@@ -1,40 +1,39 @@
 .header {
+  @include button-style;
+  @include scale;
+  height: 88px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   border-bottom: 1px solid $border-color;
-  margin-bottom: 24px;
-  @include respond-to('medium') {
-    margin-bottom: initial;
-  }
+  background-color: $white;
 
   &__container {
-    display: flex;
-    min-height: 88px;
-    align-items: center;
-
-    @include respond-to('medium') {
-      position: absolute;
-      z-index: 1;
-      top: 1.5vw;
-      left: 59.8vw;
-      padding: 0 28px;
+    @include responsive-padding;
+    @media (min-width: $screen-lg) {
+      display: none;
     }
   }
-
-  // .header__logo
 
   &__logo {
     position: relative;
     flex: 1 1 auto;
     margin-left: 16px;
-    @include respond-to('small') {
+
+    @media (min-width: $screen-sm) {
       margin-left: 40px;
     }
-    @include respond-to('medium') {
+
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
 
   &__logo::before {
-    @include respond-to('small') {
+    @media (min-width: $screen-sm) {
       content: '';
       position: absolute;
       width: 2px;
@@ -46,29 +45,26 @@
   }
 
   &__menu-button {
-    @include respond-to('medium') {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
 
-  // .header__contacts-list
-
   &__contacts {
-    @include respond-to('medium') {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
 
   &__contacts-list {
     display: none;
-    @include respond-to('small') {
+
+    @media (min-width: $screen-sm) {
       display: flex;
       gap: 16px;
       margin-right: 20px;
     }
   }
-
-  // .header__link
 
   &__link {
     display: flex;
@@ -76,7 +72,7 @@
 
     > span {
       display: none;
-      @include respond-to('medium') {
+      @media (min-width: $screen-lg) {
         display: inline-block;
         font-weight: 500;
         letter-spacing: -0.2px;
@@ -84,8 +80,6 @@
       }
     }
   }
-
-  // .header__navigation
 
   &__navigation {
     position: relative;
@@ -100,23 +94,43 @@
       top: 50%;
       background: #eaeaea;
       transform: translate(-20px, -50%);
-
-      @include respond-to('medium') {
+      @media (min-width: $screen-lg) {
         display: none;
       }
     }
   }
 
-  // .header__nav-list
-
   &__nav-list {
     display: flex;
     gap: 16px;
-    @include respond-to('small') {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      top: 50%;
+      transform: translate(-20px, -50%);
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
       margin-right: 0;
     }
-    @include respond-to('medium') {
+
+    @media (min-width: $screen-md) {
       gap: 32px;
     }
+  }
+}
+
+.header__nav-list-medium {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    @include scale;
   }
 }

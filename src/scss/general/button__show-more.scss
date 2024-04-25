@@ -1,0 +1,33 @@
+.button {
+  // .button__show-more
+
+  &__show-more {
+    font-family: $font-family-medium;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    transition: all 0.5s;
+    text-align: left;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 11px;
+      margin-right: 9px;
+      background-image: url('../img/show-more-button.svg');
+      background-repeat: no-repeat;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease-in-out;
+      position: relative;
+    }
+
+    &--open::before {
+      transform: rotate(180deg);
+    }
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
