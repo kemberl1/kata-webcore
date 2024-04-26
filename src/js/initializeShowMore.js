@@ -19,7 +19,7 @@ export function initializeShowMore() {
       } else {
         setTimeout(() => {
           elem.textContent = showText // Устанавливаем текст кнопки после задержки
-        }, 900)
+        }, 1100)
       }
     })
   })

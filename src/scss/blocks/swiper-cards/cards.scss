@@ -50,7 +50,7 @@
 
   &__item-list {
     @media (min-width: $screen-sm) {
-      transition: max-height 2s ease-in-out;
+      transition: max-height 2s;
       width: 100%;
       max-height: 166px;
       overflow: hidden;

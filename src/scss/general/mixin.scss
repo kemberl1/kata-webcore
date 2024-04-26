@@ -103,7 +103,7 @@
 
 @mixin show--full {
   .content-container.content-container-show--full {
-    max-height: 100vh;
+    max-height: 500px;
     overflow: hidden;
     margin-bottom: 30px;
   }
