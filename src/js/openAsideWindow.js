@@ -36,7 +36,7 @@ export function openAsideWindow() {
       const asideWindows = document.querySelectorAll('.aside-window')
       const clickedInsideWindow = target.closest('.aside-window')
 
-      // обработчик клика вне модального окна
+      // проверка клика вне модального окна
       if (!clickedInsideWindow) {
         asideWindows.forEach((window) => {
           window.classList.add('reverse-animation')
@@ -53,12 +53,12 @@ export function openAsideWindow() {
     }
   })
 
-  // обработчик изменения размера окна
+  // проверка изменения размера окна для скрытия меню
   window.addEventListener('resize', () => {
     if (window.innerWidth > 1439) {
       const windows = document.querySelectorAll('.aside-window')
       windows.forEach((window) => {
-        window.classList.remove('window--open', 'form-open')
+        window.classList.remove('window--open')
       })
     }
   })
@@ -67,7 +67,7 @@ export function openAsideWindow() {
   links.forEach((link) => {
     link.addEventListener('click', (event) => {
       if (link.getAttribute('href').startsWith('.')) {
-        event.preventDefault() // Предотвращает переход по ссылке
+        event.preventDefault() // Предотвращает переход на начало страницы по клику на кнопки сайдбара
       }
     })
   })
