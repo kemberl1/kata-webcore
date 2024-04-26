@@ -6,8 +6,10 @@
   border-bottom: 1px solid $border-bottom;
   padding-bottom: 20px;
   max-width: 421px;
+
   &__article {
     margin-bottom: 16px;
+
     @media (min-width: $screen-sm) {
       margin: 0;
     }
@@ -17,6 +19,7 @@
     font-family: $font-family-medium;
     line-height: 24px;
     transition: all 0.4s ease-in-out;
+
     &:hover {
       color: $pink;
     }

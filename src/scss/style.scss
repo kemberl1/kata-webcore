@@ -3,23 +3,24 @@
 @import './general/fonts';
 @import './general/variables';
 @import './general/mixin';
+
+// --> General --> Swiper
 @import '../../node_modules/swiper/swiper.css';
 @import '../../node_modules/swiper/modules/pagination.css';
-@import './general/swiper';
-@import './general/button__show-more.scss';
-@import './general/show--full';
+@import './general/swiper.scss';
 
 //Blocks
+@import './blocks/body';
 @import './blocks/header';
 @import './blocks/service';
 @import './blocks/sidebar-menu';
 @import './blocks/input-box';
-@import './blocks/blur-overlay';
 @import './blocks/offer.scss';
 @import './blocks/footer.scss';
-@import './blocks/body';
+@import './blocks/button__show-more.scss';
+@import './blocks/blur-overlay';
 
-//Blocks ---> Swiper-cards
+//--> Blocks ---> Swiper-cards
 @import './blocks/swiper-cards/cards';
 @import './blocks/swiper-cards/brands';
 @import './blocks/swiper-cards/technics';

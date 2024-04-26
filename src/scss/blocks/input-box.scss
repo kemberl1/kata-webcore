@@ -12,7 +12,6 @@
   z-index: 99999999999;
   margin: 0;
   padding-top: 24px;
-  animation: slideIn 0.3s ease-in-out forwards;
 
   @media (min-width: $screen-sm) {
     box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
@@ -69,6 +68,25 @@
     line-height: 16px;
   }
 }
+
+@keyframes formSlide {
+  from {
+    right: -800px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes formSlideReverse {
+  from {
+    right: 0;
+  }
+  to {
+    right: -800px;
+  }
+}
+
 .form-open {
   display: block;
   z-index: 10000000000000000000000000000000000000000;
@@ -76,16 +94,12 @@
   background-color: #f8f8f8;
   z-index: 999;
   top: 0;
+  right: 0;
   height: 100%;
+  animation: formSlide 0.3s ease-in-out;
 }
-
-@keyframes slideIn {
-  from {
-    right: -800px;
-  }
-  to {
-    right: 0;
-  }
+.form-open.reverse-animation {
+  animation: formSlideReverse 0.3s ease-in-out;
 }
 
 .text--pink {

@@ -36,20 +36,26 @@ export function openAsideWindow() {
       const asideWindows = document.querySelectorAll('.aside-window')
       const clickedInsideWindow = target.closest('.aside-window')
 
+      // обработчик клика вне модального окна
       if (!clickedInsideWindow) {
         asideWindows.forEach((window) => {
-          window.classList.remove('window--open', 'form-open')
+          window.classList.add('reverse-animation')
+          setTimeout(() => {
+            window.classList.remove(
+              'window--open',
+              'form-open',
+              'reverse-animation'
+            )
+          }, 250)
           blur.classList.remove('blur-active')
         })
       }
     }
   })
 
-  // Добавляем обработчик изменения размера окна
+  // обработчик изменения размера окна
   window.addEventListener('resize', () => {
-    // Проверяем ширину страницы
     if (window.innerWidth > 1439) {
-      // Удаляем классы window-open и form-open
       const windows = document.querySelectorAll('.aside-window')
       windows.forEach((window) => {
         window.classList.remove('window--open', 'form-open')

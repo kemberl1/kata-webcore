@@ -99,6 +99,16 @@
   }
 }
 
+//content-container-show--full
+
+@mixin show--full {
+  .content-container.content-container-show--full {
+    max-height: 100vh;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+}
+
 //animation
 
 @mixin grey-brighter {

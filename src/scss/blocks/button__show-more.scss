@@ -7,7 +7,7 @@
     border: none;
     cursor: pointer;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 1s;
     text-align: left;
 
     &::before {
@@ -19,7 +19,7 @@
       background-image: url('../img/show-more-button.svg');
       background-repeat: no-repeat;
       transform: rotate(0deg);
-      transition: transform 0.5s ease-in-out;
+      transition: transform 1s ease-in-out;
       position: relative;
     }
 

@@ -3,6 +3,7 @@
 .service {
   &__container {
     @include responsive-padding;
+
     @media (min-width: $screen-lg) {
       position: relative;
       padding: 0 34px;
@@ -20,6 +21,7 @@
       letter-spacing: -0.6px;
       line-height: 40px;
       margin-top: 24px;
+
       @media (min-width: $screen-lg) {
         margin-top: 42px;
       }
@@ -53,6 +55,7 @@
       margin: 32px -24px;
       padding-left: 24px;
     }
+
     @media (min-width: $screen-md) {
       flex-wrap: wrap;
       overflow: hidden;
@@ -105,6 +108,7 @@
 
   &__about-content {
     margin-bottom: auto;
+    @include show--full;
   }
 
   // .service__about-text
@@ -116,6 +120,7 @@
     margin-bottom: 10px;
     font-size: 14px;
     color: #1b1c21;
+    transition: max-height 2s ease-in-out;
 
     @media (min-width: $screen-sm) {
       max-height: 160px;
@@ -132,6 +137,7 @@
     width: 110%;
     height: auto;
     transition: all 0.5s ease-in-out;
+
     @media (min-width: $screen-sm) {
       border-radius: 8px;
       width: 100%;
