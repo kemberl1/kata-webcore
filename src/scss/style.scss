@@ -4,11 +4,6 @@
 @import './general/variables';
 @import './general/mixin';
 
-// --> General --> Swiper
-@import '../../node_modules/swiper/swiper.css';
-@import '../../node_modules/swiper/modules/pagination.css';
-@import './general/swiper.scss';
-
 //Blocks
 @import './blocks/body';
 @import './blocks/header';
@@ -25,3 +20,6 @@
 @import './blocks/swiper-cards/brands';
 @import './blocks/swiper-cards/technics';
 @import './blocks/swiper-cards/prices';
+@import '../../node_modules/swiper/swiper.css';
+@import '../../node_modules/swiper/modules/pagination.css';
+@import './blocks/swiper-cards/swiper.scss';
