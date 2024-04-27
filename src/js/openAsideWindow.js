@@ -1,4 +1,15 @@
 export function openAsideWindow() {
+  // Добавляем класс 'modal-open' к body при открытии модального окна
+  function addModalOpenClass() {
+    document.body.classList.add('modal--open')
+  }
+
+  // Удаляем класс 'modal-open' из body при закрытии модального окна
+  function removeModalOpenClass() {
+    document.body.classList.remove('modal--open')
+  }
+
+  // Функция для обработки события клика
   document.body.addEventListener('click', function (event) {
     const target = event.target
     const button = target.closest('.open-button')
@@ -30,6 +41,11 @@ export function openAsideWindow() {
               blur.classList.add('blur-active')
             }
           })
+          // Добавляем класс 'modal-open' к body при открытии модального окна
+          addModalOpenClass()
+        } else {
+          // Удаляем класс 'modal-open' из body при закрытии модального окна
+          removeModalOpenClass()
         }
       }
     } else {
@@ -48,6 +64,8 @@ export function openAsideWindow() {
             )
           }, 250)
           blur.classList.remove('blur-active')
+          // Удаляем класс 'modal-open' из body при закрытии модального окна
+          removeModalOpenClass()
         })
       }
     }
@@ -59,9 +77,12 @@ export function openAsideWindow() {
       const windows = document.querySelectorAll('.aside-window')
       windows.forEach((window) => {
         window.classList.remove('window--open')
+        // Удаляем класс 'modal-open' из body при закрытии модального окна
+        removeModalOpenClass()
       })
     }
   })
+
   const links = document.querySelectorAll('a')
 
   links.forEach((link) => {
