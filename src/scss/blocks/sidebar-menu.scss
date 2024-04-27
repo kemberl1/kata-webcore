@@ -6,7 +6,8 @@
 
   @media (min-width: $screen-lg) {
     @include responsive-sidebar;
-    height: 900px;
+    height: auto;
+    justify-content: flex-start;
   }
 }
 
@@ -128,6 +129,10 @@
   padding: 0 32px;
   padding-bottom: 16px;
   margin-top: auto;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 268px;
+  }
 
   &__contacts-list {
     display: flex;
